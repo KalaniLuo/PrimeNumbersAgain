@@ -42,11 +42,11 @@ class Program
 
         bool[] composite = new bool[limit + 1];
 
-        for (int i = 2; i * i <= limit; i++)
+        for(int i = 2; i * i <= limit; i++)
         {
-            if (composite[i] == false)
+            if(composite[i]== false)
             {
-                for (int j = i * i; j <= limit; j = j + i)
+                for(int j = i * i; j <= limit; j = j +i)
                 {
                     composite[j] = true;
                 }
@@ -55,13 +55,13 @@ class Program
 
         int count = 0;
 
-        for (int i = 2; i <= limit; i++)
+        for(int i = 2; i <= limit; i++)
         {
-            if (composite[i] == false)
+            if(composite[i] == false)
             {
                 count++;
                 
-                if (count == n)
+                if(count == n)
                 {
                     return i;
                 }
